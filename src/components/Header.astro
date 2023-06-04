@@ -1,4 +1,5 @@
 <button
+  aria-label="menu button"
   id="menu-btn"
   class="menu_icon fixed top-[25px] right-[25px] sm:hidden z-50"
 >
@@ -81,7 +82,12 @@
       </a>
     </div>
     <div class="flex flex-col gap-sm items-center dark:invert">
-      <button id="light" data-theme="light" class="text-bg dark:text-white">
+      <button
+        aria-label="Dark mode button"
+        id="light"
+        data-theme="light"
+        class="text-bg dark:text-white"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -98,7 +104,12 @@
             fill="currentColor"></path>
         </svg>
       </button>
-      <button id="dark" data-theme="dark" class="text-black dark:text-white">
+      <button
+        aria-label="Light mode button"
+        id="dark"
+        data-theme="dark"
+        class="text-black dark:text-white"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
