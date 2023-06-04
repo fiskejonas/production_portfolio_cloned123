@@ -74,6 +74,7 @@ function showCards() {
 
       clone.querySelector(".template_frame").src =
         "https://wmcontent.dk/_HighImpact/" + card.link;
+      clone.querySelector(".template_frame").title = card.description;
       clone.querySelector(".template_beskrivelse").textContent =
         card.description;
       clone.querySelector(".template_navn").textContent = card.title;

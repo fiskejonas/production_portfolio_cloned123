@@ -59,6 +59,7 @@ function showCards() {
 
       clone.querySelector(".offline-template_frame").src =
         "../images/" + card.link;
+      clone.querySelector(".offline-template_frame").alt = card.alt;
 
       clone
         .querySelector(".offline-template_article")
