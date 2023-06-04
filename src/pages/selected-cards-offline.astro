@@ -1,0 +1,43 @@
+---
+// Component Imports
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/styles.css";
+import Button5 from "../components/Button5.astro";
+---
+
+<script>
+  import "../scripts/selected-cards-offline.js";
+</script>
+
+<MainLayout title="Selected Creative Assets">
+  <template class="offline-template">
+    <article class="offline-template_article lg:rounded-md rounded-sm group">
+      <img
+        class="offline-template_frame lg:rounded-md pointer-events-none shadow-lg rounded-sm"
+        src=""
+      />
+    </article>
+  </template>
+  <div
+    class="selected_wrapper w-full h-full flex flex-col items-center justify-center mt-md dark:bg-neutral500"
+  >
+    <div
+      class="selected_titles flex flex-col w-full pt-md pb-sm items-center justify-center gap-xs h-full"
+    >
+      <h1 class="text-lg font-helvetica2 dark:text-neutral100">
+        offline<span class="text-accent100">.</span>
+      </h1>
+      <h2 class="text-sm font-helvetica2 text-neutral300 dark:text-neutral200">
+        Wavemaker Production
+      </h2>
+    </div>
+    <section class="w-full h-full dark:bg-neutral500" id="offline-gallery2">
+    </section>
+  </div>
+  <div
+    class="line flex flex-col items-center justify-center w-full dark:bg-neutral500"
+  >
+    <div class="border border-b-4 mt-md w-1/2 dark:invert"></div>
+    <Button5>Copy link</Button5>
+  </div>
+</MainLayout>

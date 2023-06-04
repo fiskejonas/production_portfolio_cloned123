@@ -1,0 +1,598 @@
+---
+// Component Imports
+import Button from "../components/Button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/styles.css";
+import Button2 from "../components/Button2.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<MainLayout title="Wavemaker Production">
+  <section
+    class="h-screen dark:bg-neutral500 hero1 flex flex-col justify-center md:place-items-center items-center"
+    id="hero"
+  >
+    <div class="flex hero_text flex-col place-items-center max-w-[400px]">
+      <h1 class="text-2xl font-helvetica2 dark:text-neutral100">
+        pro <br /> duc <br /> tion<span class="text-accent200">.</span>
+      </h1>
+      <h2
+        class="font-helvetica2 text-xs pt-xs sibling1 text-neutral400 dark:text-neutral200"
+      >
+        Banners. Offline. Video.
+      </h2>
+      <p
+        class="font-georgia text-2xs sibling2 pt-xs text-neutral400 dark:text-neutral200"
+      >
+        Here you’ll find the production teams’ best work. Filter through, and
+        share what you like.
+      </p>
+      <div class="flex flex-col mt-sm gap-xs">
+        <Button>Take me to the archive!</Button>
+      </div>
+    </div>
+    <div id="hero-img" class="w-full hidden md:block h-auto max-w-[700px]">
+      <img
+        width="1887px"
+        height="1887px"
+        src="../images/blender_render4.webp"
+        alt=""
+      />
+    </div>
+    <script>
+      import "../scripts/parralax.js";
+    </script>
+  </section>
+  <section
+    class="grid w-full place-items-center dark:bg-neutral500"
+    id="archive"
+  >
+    <div class="banners_and_border w-full flex">
+      <div class="border-b-4 border-dashed dark:text-neutral300 w-full"></div>
+      <h2
+        class="sm:text-lg text-md font-helvetica2 flex justify-end dark:text-neutral100"
+      >
+        archive<span class="text-accent200">.</span>
+      </h2>
+    </div>
+    <div
+      id="banners"
+      class="w-full sm:pt-lg flex flex-col items-center section1 justify-center sm:block"
+    >
+      <div
+        class="flex items-end justify-cent gap-xs pt-sm pb-sm banners-and-facts"
+      >
+        <h3
+          class="font-helvetica2 sm:text-md md:text-lg text-sm dark:text-neutral200"
+        >
+          banners
+        </h3>
+        <a href="/#facts">
+          <img
+            src="../icons/fakta.svg"
+            class="max-w-[45px] lg:hidden sm:max-w-[70px] dark:invert"
+            alt="icon of a checklist"
+          />
+        </a>
+      </div>
+      <div
+        class="filters_and_facts flex md:flex-col md:w-fit md:items-start justify-center lg:items-center lg:w-full lg:flex-row flex-col items-center w-full gap-xs text-neutral400"
+      >
+        <div class="banners_titles text-xs flex gap-xs dark:text-neutral200">
+          <h2 class="font-helvetica2 uppercase" id="brandTitle"></h2>
+          <div>|</div>
+          <h3 class="font-helvetica" id="kategoriSubtitle"></h3>
+        </div>
+
+        <div class="p-2 m-5 flex">
+          <div class="flex gap-xs font-helvetica text-2xs sm:text-xs">
+            <select
+              id="kategoriSelect"
+              class="py-2xs md:py-xs md:px-sm px-xs rounded-lg flex bg-neutral200 z-38"
+            >
+              <option value="">All types</option>
+            </select>
+
+            <select
+              class="py-2xs px-xs rounded-lg md:py-xs md:px-sm bg-neutral200 z-38"
+              id="brandSelect"
+            >
+              <option value="">All brands</option>
+            </select>
+          </div>
+        </div>
+        <div class="fakta_desk lg:flex ml-auto hidden">
+          <a href="/#facts">
+            <img
+              src="../icons/fakta2.svg"
+              class="max-h-[70px] hidden md:flex dark:invert fact"
+              alt="icon of a checklist"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-sm w-full">
+        <template class="w-full">
+          <div class="py-xs cards-ting w-full">
+            <article
+              class="template_article lg:rounded-md w-full h-fit rounded-sm bg-primary100 group shadow-lg"
+            >
+              <div class="hover-message">Click to select</div>
+              <iframe
+                class="template_frame shadow-lg lg:rounded-md w-full pointer-events-none rounded-sm aspect-[339/129]"
+                src=""
+                frameborder="0"></iframe>
+              <div class="text-and-btns group-hover:p-xs sm:group-hover:p-sm">
+                <div class="card_text flex flex-col w-fit">
+                  <div class="flex items-center pb-xs">
+                    <h4
+                      class="template_navn font-helvetica2 text-2xs sm:text-xs text-neutral400 mr-xs"
+                    >
+                    </h4>
+                    <p class="performance text-neutral300">
+                      <span class="text-positive100"> CTR: +0,1%</span> &<span
+                        class="text-positive100"
+                      >
+                        BTR: +0,05%</span
+                      >
+                    </p>
+                  </div>
+                  <p
+                    class="template_beskrivelse max-w-lg font-georgia text-2xs text-neutral300 hidden sm:block"
+                  >
+                  </p>
+                </div>
+                <div class="card-btn flex items-end ml-auto pt-sm">
+                  <Button2 href="">Top & midscroll</Button2>
+                </div>
+              </div>
+            </article>
+          </div>
+        </template>
+      </div>
+
+      <section class="flex flex-col w-full" id="gallery"></section>
+      <script>
+        import "../scripts/banners.js";
+      </script>
+    </div>
+    <div
+      id="offline"
+      class="w-full sm:pt-lg flex flex-col items-center section1 justify-center sm:block"
+    >
+      <div
+        class="flex items-end justify-cent gap-xs pt-sm dark:text-neutral200 pb-sm"
+      >
+        <h3 class="font-helvetica2 sm:text-md md:text-lg text-sm">offline</h3>
+        <a href="/#facts">
+          <img
+            src="../icons/fakta.svg"
+            class="max-w-[45px] lg:hidden sm:max-w-[70px] dark:invert"
+            alt="icon of a checklist"
+          />
+        </a>
+      </div>
+      <div
+        class="filters_and_facts flex md:flex-col md:w-fit md:items-start justify-center lg:items-center lg:w-full lg:flex-row flex-col items-center w-full gap-xs text-neutral400"
+      >
+        <div class="banners_titles text-xs flex gap-xs dark:text-neutral200">
+          <h2 class="font-helvetica2 uppercase" id="offline-brandTitle"></h2>
+          <div>|</div>
+          <h3 class="font-helvetica" id="offline-kategoriSubtitle"></h3>
+        </div>
+
+        <div class="p-2 m-5 flex">
+          <div class="flex gap-xs font-helvetica text-2xs sm:text-xs">
+            <select
+              id="offline-kategoriSelect"
+              class="py-2xs md:py-xs md:px-sm px-xs rounded-lg flex bg-neutral200 z-38"
+            >
+              <option value="">All types</option>
+            </select>
+
+            <select
+              class="py-2xs px-xs rounded-lg md:py-xs md:px-sm bg-neutral200 z-38"
+              id="offline-brandSelect"
+            >
+              <option value="">All brands</option>
+            </select>
+          </div>
+        </div>
+        <div class="fakta_desk lg:flex ml-auto hidden">
+          <a href="/#facts">
+            <img
+              src="../icons/fakta2.svg"
+              class="max-h-[70px] hidden md:flex dark:invert fact"
+              alt="icon of a checklist"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-sm">
+        <template class="offline-template">
+          <div class="break-inside-avoid pt-sm">
+            <article
+              class="offline-template_article max-w-[500px] lg:rounded-md h-fit rounded-sm bg-primary100 group shadow-lg"
+            >
+              <div class="hover-message">Click to select</div>
+              <img
+                class="offline-template_frame shadow-lg lg:rounded-md pointer-events-none rounded-sm"
+                src=""
+              />
+            </article>
+          </div>
+        </template>
+      </div>
+
+      <section
+        class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 w-full"
+        id="offline-gallery"
+      >
+      </section>
+    </div>
+    <script>
+      import "../scripts/offline.js";
+    </script>
+    <div
+      id="video"
+      class="w-full sm:pt-lg flex flex-col items-center section1 justify-center sm:block"
+    >
+      <div
+        class="flex items-end justify-cent gap-xs pt-sm pb-sm dark:text-neutral200"
+      >
+        <h3 class="font-helvetica2 sm:text-md md:text-lg text-sm">video</h3>
+        <a href="/#facts">
+          <img
+            src="../icons/fakta.svg"
+            class="max-w-[45px] lg:hidden sm:max-w-[70px] dark:invert"
+            alt="icon of a checklist"
+          />
+        </a>
+      </div>
+      <div
+        class="filters_and_facts flex md:flex-col md:w-fit md:items-start justify-center lg:items-center lg:w-full lg:flex-row flex-col items-center w-full gap-xs text-neutral400"
+      >
+        <div class="banners_titles text-xs flex dark:text-neutral200 gap-xs">
+          <h2 class="font-helvetica2 uppercase" id="video-brandTitle"></h2>
+          <div>|</div>
+          <h3 class="font-helvetica" id="video-kategoriSubtitle"></h3>
+        </div>
+
+        <div class="p-2 m-5 flex">
+          <div class="flex gap-xs font-helvetica text-2xs sm:text-xs">
+            <select
+              id="video-kategoriSelect"
+              class="py-2xs md:py-xs md:px-sm px-xs rounded-lg flex bg-neutral200 z-38"
+            >
+              <option value="">All types</option>
+            </select>
+
+            <select
+              class="py-2xs px-xs rounded-lg md:py-xs md:px-sm bg-neutral200 z-38"
+              id="video-brandSelect"
+            >
+              <option value="">All brands</option>
+            </select>
+          </div>
+        </div>
+        <div class="fakta_desk lg:flex ml-auto hidden shadow-lg">
+          <a href="/#facts">
+            <img
+              src="../icons/fakta2.svg"
+              class="max-h-[70px] hidden dark:invert md:flex fact"
+              alt="icon of a checklist"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-sm">
+        <template class="video-template">
+          <div class="break-inside-avoid pt-sm">
+            <article
+              class="video-template_article max-w-[500px] lg:rounded-md h-fit rounded-sm bg-primary100 group shadow-lg"
+            >
+              <div class="hover-message">Click to select</div>
+              <video
+                width="1080px"
+                height="1920px"
+                muted
+                class="video-template_frame shadow-lg lg:rounded-md rounded-sm"
+                src=""></video>
+            </article>
+          </div>
+        </template>
+      </div>
+
+      <section
+        class="columns-1 md:columns-2 lg:columns-3 w-full"
+        id="video-gallery"
+      >
+      </section>
+      <!-- <Button8>View Selected</Button8>
+      <Button9>Deselect All</Button9> -->
+    </div>
+    <script>
+      import "../scripts/video.js";
+    </script>
+  </section>
+  <section class="grid py-xl dark:bg-neutral500" id="facts">
+    <div class="checklist-title flex">
+      <div
+        class="dotted-div border-b-4 border-dashed w-full dark:text-neutral300"
+      >
+      </div><h2 class="md:text-lg text-sm font-helvetica2 dark:text-neutral200">
+        deliverables checklist<span class="text-accent200">.</span>
+      </h2>
+    </div>
+    <article class="banner-facts-high-impact pt-md">
+      <h3
+        class="font-helvetica2 text-md block pb-sm mr-auto dark:text-neutral200"
+      >
+        Banners
+      </h3>
+      <h4
+        class="font-helvetica2 text-sm block pb-sm mr-auto dark:text-neutral200"
+      >
+        High impact
+      </h4>
+      <div class="boxes flex flex-wrap gap-sm">
+        <div
+          class="box1 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/process.svg"
+              alt="process icon"
+            />
+            <h5 class="text-[2rem] font-helvetica2">Process</h5>
+          </div>
+          <ul
+            class="marker:text-tertiary100 list-disc ml-sm font-helvetica text-2xs"
+          >
+            <li>Intro meeting with client about design</li>
+            <li>Communication with client throughout the entire process</li>
+            <li>Develop creative design with the available assets</li>
+            <li>Help the client with HIB options and design</li>
+          </ul>
+        </div>
+        <div
+          class="box2 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/budget.svg"
+              alt="budget icon"
+            />
+            <h5 class="text-[2rem] font-helvetica2">Budget</h5>
+          </div>
+          <ul class="font-helvetica text-2xs">
+            <li>
+              <span class="font-helvetica2"
+                >Top <u class="underline">or</u> mid:</span
+              > 12.000 DKK
+            </li>
+            <li><span class="font-helvetica2">Fluid:</span> 15.000 DKK</li>
+            <li>
+              <span class="font-helvetica2">Top + mid:</span> 17.000 DKK
+            </li>
+            <li>
+              <span class="font-helvetica2">Top + mid + fluid:</span> 30.000 DKK
+            </li>
+            <li>
+              <span class="font-helvetica2">Project management:</span> 10.000 DKK
+            </li>
+            <li>
+              <span class="font-helvetica2">Add-on:</span> Very specific effect -
+              ask
+            </li>
+            <li class="font-helvetica2">Regular Adnami CPM fee</li>
+            <li>
+              <span class="font-helvetica2">Deliverables:</span> Assets, logo, font,
+              copy/CTA
+            </li>
+          </ul>
+        </div>
+        <div
+          class="box3 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/deliver.svg"
+              alt="deliver icon"
+            />
+            <h5 class="text-xs font-helvetica2">Deliverables</h5>
+          </div>
+          <ul
+            class="marker:text-tertiary100 list-disc ml-sm font-helvetica text-2xs"
+          >
+            <li>Assets</li>
+            <li>Logo</li>
+            <li>Font</li>
+            <li>Copy/CTA</li>
+          </ul>
+        </div>
+        <div
+          class="box4 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/timeframe.svg"
+              alt="time icon"
+            />
+            <h5 class="text-xs font-helvetica2">
+              Timeframe: <span class="text-neutral400">three weeks</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="banner-facts-video-banner pt-lg">
+      <h4
+        class="font-helvetica2 text-sm block dark:text-neutral200 pb-sm mr-auto"
+      >
+        Video in banner
+      </h4>
+      <div class="boxes flex flex-wrap gap-sm">
+        <div
+          class="box1 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/process.svg"
+              alt="process icon"
+            />
+            <h5 class="text-[2rem] font-helvetica2">Process</h5>
+          </div>
+          <ul
+            class="marker:text-tertiary100 list-disc ml-sm font-helvetica text-2xs"
+          >
+            <li>Intro meeting with client about design</li>
+            <li>Communication with client throughout the entire process</li>
+            <li>Develop creative design with the available assets</li>
+            <li>Help the client with VIB options and design</li>
+          </ul>
+        </div>
+        <div
+          class="box2 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/budget.svg"
+              alt="budget icon"
+            />
+            <h5 class="text-[2rem] font-helvetica2">Budget</h5>
+          </div>
+          <ul class="font-helvetica text-2xs">
+            <li><span class="font-helvetica2">1-4 formats</span> 15.000 DKK</li>
+            <li>
+              <span class="font-helvetica2">5-8 formats</span> 20.000 DKK
+            </li>
+            <li>
+              <span class="font-helvetica2">Project management</span> 5.000 DKK
+            </li>
+            <li>
+              <span class="font-helvetica2"
+                >Add-on effects <br />(carousel, snow, mouseover, etc.):</span
+              > 5.000 DKK
+            </li>
+            <li class="font-helvetica2">No CPM fee for hosting</li>
+          </ul>
+        </div>
+        <div
+          class="box3 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/deliver.svg"
+              alt="deliver icon"
+            />
+            <h5 class="text-xs font-helvetica2">Deliverables</h5>
+          </div>
+          <ul
+            class="marker:text-tertiary100 list-disc ml-sm font-helvetica text-2xs"
+          >
+            <li>16:9, 9:16 and/or 1:1 (minimum 1, preferrably all)</li>
+            <li>Logo</li>
+            <li>Font</li>
+            <li>Copy/CTA</li>
+          </ul>
+        </div>
+        <div
+          class="box4 bg-neutral200 rounded-sm sm:rounded-md flex flex-col w-fit h-fit p-sm gap-sm"
+        >
+          <div class="process-and-icon flex">
+            <img
+              class="max-w-[35px] mr-sm"
+              src="../icons/timeframe.svg"
+              alt="time icon"
+            />
+            <h5 class="text-xs font-helvetica2">
+              Timeframe: <span class="text-neutral400">three weeks</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="required assets pt-lg flex flex-col gap-sm">
+      <h3 class="font-helvetica2 text-md block mr-auto dark:text-neutral200">
+        Required assets - <span
+          class="font-helvetica text-neutral400 dark:text-neutral200"
+          >for all banners</span
+        >
+      </h3>
+      <div
+        class="asset-box flex flex-wrap text-2xs md:grid md:grid-cols-2 rounded-sm sm:rounded-md bg-neutral200"
+      >
+        <div class="images flex gap-xs flex-col p-sm">
+          <h5 class="text-tertiary200 text-xs font-helvetica2">Images</h5>
+          <h6>
+            <span class="font-helvetica2"> File type:</span> PSD (with layers) <span
+              class="font-helvetica2 text-xs text-accent200">*</span
+            >
+          </h6>
+          <li class="font-georgia max-w-[500px] ml-sm">
+            E.g., Product images, before/after, print material or other images
+            that you want to be used in the creatives. Please only share the
+            assets you want to be used.
+          </li>
+        </div>
+        <div class="logo flex gap-xs flex-col p-sm">
+          <h5 class="text-tertiary200 text-xs font-helvetica2">Logo</h5>
+          <h6>
+            <span class="font-helvetica2"> File type:</span> Preferably in vector
+            (SVG or EPS)
+          </h6>
+        </div>
+        <div class="font flex gap-xs flex-col p-sm">
+          <h5 class="text-tertiary200 text-xs font-helvetica2">Font</h5>
+          <h6>
+            <span class="font-helvetica2"> File type:</span> OTF or TTF
+          </h6>
+        </div>
+        <div class="cta-and-copy flex gap-xs flex-col p-sm">
+          <h5 class="text-tertiary200 text-xs font-helvetica2">CTA + Copy</h5>
+          <h6>
+            <span class="font-helvetica2"> File type:</span> Word document - in different
+            languages if needed
+          </h6>
+        </div>
+        <div class="asset-video flex gap-xs flex-col p-sm">
+          <h5 class="text-tertiary200 text-xs font-helvetica2">Video</h5>
+          <h6>
+            <span class="font-helvetica2"> File type:</span> High resolution MP4
+            or MOV
+          </h6>
+          <li class="font-georgia max-w-[500px] ml-sm">
+            Please only share the video(s) you want to be used
+          </li>
+        </div>
+        <div class="optional flex gap-xs flex-col p-sm">
+          <h5 class="text-tertiary200 text-xs font-helvetica2">(Optional)</h5>
+          <h6>Other material e.g. animations</h6>
+        </div>
+        <div class="flex gap-xs flex-col p-sm">
+          <p>
+            <span class="font-helvetica2 text-xs text-accent200">*</span>You can
+            also deliver the images in JPG, PNG or TIFF. The difference between
+            JPG, PNG, TIFF vs PSD with Layers is that PSD files has layers,
+            those layers can be anything from JPG, PNG, TIFF etc. A JPG is only
+            a one-layer file, so we can’t pull anything from it and must use
+            as-is.
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+</MainLayout>
