@@ -166,3 +166,44 @@ article {
     display: none;
   }
 }
+
+.cases-gallery {
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.story_images {
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.animations_videos {
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.deliver_videos {
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.loreal {
+  transition: 750ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  offset-anchor: left bottom;
+}
+
+.loreal:hover {
+  cursor: pointer;
+  transform: translateY(-25px);
+  transition: 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.loreal:active {
+  transform: translateY(-15px);
+  scale: 0.98;
+  transition: 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}

@@ -1,0 +1,125 @@
+---
+// Component Imports
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/styles.css";
+import Button_cases2 from "../components/Button_cases2.astro";
+---
+
+<MainLayout>
+  <section
+    class="w-full dark:bg-neutral500 h-screen items-center justify-center"
+    id="hero"
+  >
+    <div class="cases-text-and-button flex flex-col gap-sm">
+      <h1
+        class="font-helvetica2 text-lg sm:text-2xl text-sekundary100 dark:text-primary100"
+      >
+        cases<span class="text-accent200">.</span>
+      </h1>
+      <div>
+        <p class="font-helvetica2 text-xs text-neutral400 dark:text-neutral200">
+          From the Production team.
+        </p>
+        <p
+          class="font-helvetica dark:text-neutral200 text-2xs text-neutral400 max-w-[420px]"
+        >
+          Browse through a collection of selected cases, that goes in depth with
+          process, delivery and results.
+        </p>
+      </div>
+      <div class="w-full flex">
+        <Button_cases2>Most recent cases</Button_cases2>
+      </div>
+    </div>
+    <div id="hero-img" class="w-full hidden lg:block h-auto max-w-[700px]">
+      <img
+        width="1887px"
+        height="1887px"
+        src="../images/cube.webp"
+        alt="3d grapic in the style of Bauhaus"
+      />
+    </div>
+  </section>
+  <section class="dark:bg-neutral500" id="cases-select">
+    <div class="cases-filter font-helvetica2 w-ful flex text-neutral400">
+      <div class="cases_filter_wrapper flex flex-col gap-2xs ml-auto">
+        <div class="filter_by_type text-xs text-right dark:text-neutral200">
+          FILTER BY TYPE
+        </div>
+        <div class="bannersCasesFilters flex gap-xs text-2xs">
+          <div class="banners1 py-2xs px-xs rounded-sm bg-neutral200">
+            BANNERS
+          </div>
+          <div class="offline1 py-2xs px-xs rounded-sm bg-neutral200">
+            OFFLINE
+          </div>
+          <div class="video1 py-2xs px-xs rounded-sm bg-neutral200">VIDEO</div>
+        </div>
+      </div>
+    </div>
+    <div class="cases-gallery w-full mt-sm">
+      <a href="loreal.html">
+        <div class="loreal flex flex-col items-center">
+          <img
+            class="rounded-md hover:shadow-lg transition-shadow"
+            src="../images/loreal.jpg"
+            alt="screengrab from the case video L'Oreal For The Future"
+          />
+          <h2 class="font-helvetica2 text-xs dark:text-neutral200">
+            L'Oreal For The Future
+          </h2>
+        </div>
+      </a>
+      <div class="flex flex-col items-center loreal">
+        <img
+          class="rounded-md hover:shadow-lg transition-shadow"
+          src="https://fakeimg.pl/400x400?text=placeholder&font=noto"
+          alt="screengrab from the case video L'Oreal For The Future"
+        />
+        <h2 class="font-helvetica2 text-xs dark:text-neutral200">
+          Lorem Ipsum Dolor Sit Amet
+        </h2>
+      </div>
+      <div class="flex flex-col items-center loreal">
+        <img
+          class="rounded-md hover:shadow-lg transition-shadow"
+          src="https://fakeimg.pl/400x400?text=placeholder&font=noto"
+          alt="screengrab from the case video L'Oreal For The Future"
+        />
+        <h2 class="font-helvetica2 text-xs dark:text-neutral200">
+          Lorem Ipsum Dolor Sit Amet
+        </h2>
+      </div>
+      <div class="flex flex-col items-center loreal">
+        <img
+          class="rounded-md hover:shadow-lg transition-shadow"
+          src="https://fakeimg.pl/400x400?text=placeholder&font=noto"
+          alt="screengrab from the case video L'Oreal For The Future"
+        />
+        <h2 class="font-helvetica2 text-xs dark:text-neutral200">
+          Lorem Ipsum Dolor Sit Amet
+        </h2>
+      </div>
+      <div class="flex flex-col items-center loreal">
+        <img
+          class="rounded-md hover:shadow-lg transition-shadow"
+          src="https://fakeimg.pl/400x400?text=placeholder&font=noto"
+          alt="screengrab from the case video L'Oreal For The Future"
+        />
+        <h2 class="font-helvetica2 text-xs dark:text-neutral200">
+          Lorem Ipsum Dolor Sit Amet
+        </h2>
+      </div>
+      <div class="flex flex-col items-center loreal">
+        <img
+          class="rounded-md hover:shadow-lg transition-shadow"
+          src="https://fakeimg.pl/400x400?text=placeholder&font=noto"
+          alt="screengrab from the case video L'Oreal For The Future"
+        />
+        <h2 class="font-helvetica2 text-xs dark:text-neutral200">
+          Lorem Ipsum Dolor Sit Amet
+        </h2>
+      </div>
+    </div>
+  </section>
+</MainLayout>

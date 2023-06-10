@@ -1,0 +1,124 @@
+---
+// Component Imports
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/styles.css";
+---
+
+<MainLayout>
+  <section class="mt-lg dark:bg-neutral500" id="loreal1">
+    <h1 class="sm:text-lg text-md font-helvetica2 dark:text-primary100">
+      L'Oreal For the Future
+    </h1>
+    <p class="max-w-[750px] text-xs font-helvetica mt-md dark:text-neutral200">
+      In an effort to spread out the sustainability initiatives made by L’Oreal
+      Group, a campaign was made. The centerpiece of the campaign is a
+      compelling video that seeks to share L'Oreal's vision and inspire action.
+    </p>
+    <img class="rounded-md mt-md" src="../images/salon1.png" alt="" />
+    <p class="max-w-[750px] text-xs font-helvetica mt-lg dark:text-neutral200">
+      The movie follows a consumer thoughout a visit to a salon. Along the way,
+      the different sustanaible initiatives are presented. While reminding the
+      viewer of the previous initiatives, the movie should show that this is a
+      new program that stands on top of the commitments taken earlier in the
+      value chain.
+    </p>
+  </section>
+  <section class="mt-xl dark:bg-neutral500 para_container" id="loreal2">
+    <h2
+      class="text-md dark:text-neutral200 font-helvetica2 sm:text-lg text-right para"
+    >
+      storyboard<span class="text-accent200">.</span>
+    </h2>
+    <div class="story_images mt-md">
+      <img src="../images/Billede2.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede3.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede4.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede5.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede6.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede7.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede8.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede9.png" alt="" class="story rounded-sm" />
+      <img src="../images/Billede10.png" alt="" class="story rounded-sm" />
+    </div>
+  </section>
+  <section class="mt-xl dark:bg-neutral500 para_container" id="animations">
+    <h2 class="font-helvetica2 dark:text-neutral200 text-md sm:text-lg para">
+      animations<span class="text-accent200">.</span>
+    </h2>
+    <p class="max-w-[750px] dark:text-neutral200 text-xs font-helvetica mt-md">
+      L'Oreal For The Future is enriched by an array of graphical animations
+      that are designed to captivate, educate, and inspire viewers. These
+      animations played an instrumental role in conveying the campaign's complex
+      messages in a simple, engaging, and visually appealing manner.
+    </p>
+    <div class="animations_videos mt-md">
+      <video
+        class="rounded-sm"
+        plays-inline
+        autoplay
+        loop
+        muted
+        src="../video/water.mp4"></video>
+      <video
+        plays-inline
+        autoplay
+        loop
+        muted
+        class="rounded-sm"
+        src="../video/waste.mp4"></video>
+      <video
+        plays-inline
+        autoplay
+        loop
+        muted
+        class="rounded-sm"
+        src="../video/energy.mp4"></video>
+    </div>
+  </section>
+  <section class="mt-xl dark:bg-neutral500 para_container" id="deliverables">
+    <h2
+      class="font-helvetica2 dark:text-neutral200 text-md sm:text-lg text-right para"
+    >
+      deliverables<span class="text-accent200">.</span>
+    </h2>
+    <p class="max-w-[750px] text-xs dark:text-neutral200 font-helvetica mt-md">
+      The "L'Oreal For The Future" campaign was strategically disseminated
+      through a series of powerful deliverables, comprising a long format video
+      and three shorter cutdowns, each dedicated to the crucial environmental
+      pillars of "water", "waste", and "energy".
+    </p>
+    <div class="deliver_videos mt-md">
+      <video
+        plays-inline
+        controls
+        class="rounded-sm"
+        src="../video/cutdown_water.mp4"></video>
+      <video
+        plays-inline
+        controls
+        class="rounded-sm"
+        src="../video/cutdown_waste.mp4"></video>
+      <video
+        plays-inline
+        controls
+        class="rounded-sm"
+        src="../video/cutdown_energy.mp4"></video>
+    </div>
+  </section>
+  <section class="mt-xl dark:bg-neutral500 para_container" id="results">
+    <h2 class="font-helvetica2 dark:text-neutral200 text-md sm:text-lg para">
+      results<span class="text-accent200">.</span>
+    </h2>
+    <p class="max-w-[750px] text-xs dark:text-neutral200 font-helvetica mt-md">
+      The "L'Oreal For The Future" campaign's commitment to sustainability and
+      innovation was recognized at the Danish Beauty Awards, where it was
+      honored with the prestigious "Green Award". This award is a testament to
+      L'Oreal's exemplary efforts towards implementing sustainable practices
+      within the beauty industry.
+    </p>
+    <img class="rounded-md mt-md" src="../images/lorealgreen.png" alt="" />
+  </section>
+  <script>
+    import "../scripts/loreal.js";
+  </script>
+</MainLayout>

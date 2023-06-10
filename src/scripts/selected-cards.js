@@ -68,14 +68,14 @@ button.addEventListener("click", async () => {
     await navigator.clipboard.writeText(link);
 
     // Ændrer knappens tekst til at indikere at linket er blevet kopieret
-    button.textContent = "Link kopieret!";
+    button.textContent = "Link copied!";
 
     // Ændrer knappens baggrundsfarve til grøn
     button.style.backgroundColor = "#58C369";
 
     // Ændrer knappens tekst og farve tilbage efter 3 sekunder
     setTimeout(() => {
-      button.textContent = "Kopier link";
+      button.textContent = "Copy link";
       // Dette vil nulstille den til standard eller CSS-defineret farve
       button.style.backgroundColor = "";
     }, 3000);

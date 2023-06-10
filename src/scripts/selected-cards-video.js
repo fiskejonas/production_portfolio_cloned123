@@ -52,12 +52,12 @@ button.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(link);
 
-    button.textContent = "Link Copied!";
+    button.textContent = "Link copied!";
 
     button.style.backgroundColor = "#58C369";
 
     setTimeout(() => {
-      button.textContent = "Copy Link";
+      button.textContent = "copy Link";
       button.style.backgroundColor = "";
     }, 3000);
   } catch (err) {
