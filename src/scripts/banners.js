@@ -60,9 +60,9 @@ function showCards() {
   const brand = document.getElementById("brandSelect").value;
 
   // Sæt titlen og undertitlen
-  document.getElementById("brandTitle").textContent = brand || "All brands";
+  document.getElementById("brandTitle").textContent = brand || "Alle mærker";
   document.getElementById("kategoriSubtitle").textContent =
-    kategori || "All categories";
+    kategori || "Alle kategorier";
 
   cards.forEach((card) => {
     // Vis kort, der matcher filteret
