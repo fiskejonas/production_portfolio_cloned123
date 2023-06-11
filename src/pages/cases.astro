@@ -7,10 +7,12 @@ import Button_cases2 from "../components/Button_cases2.astro";
 
 <MainLayout>
   <section
-    class="w-full dark:bg-neutral500 h-screen items-center justify-center"
+    class="w-full dark:bg-neutral500 h-screen place-items-center"
     id="hero"
   >
-    <div class="cases-text-and-button flex flex-col gap-sm">
+    <div
+      class="cases-text-and-button flex flex-col items-center px-md w-full gap-sm"
+    >
       <h1
         class="font-helvetica2 text-lg sm:text-2xl text-sekundary100 dark:text-primary100"
       >
@@ -31,11 +33,11 @@ import Button_cases2 from "../components/Button_cases2.astro";
         <Button_cases2>Most recent cases</Button_cases2>
       </div>
     </div>
-    <div id="hero-img" class="w-full hidden lg:block h-auto max-w-[700px]">
+    <div id="hero-img" class="w-full hidden lg:block h-auto max-w-[600px]">
       <img
         width="1887px"
         height="1887px"
-        src="../images/cube.webp"
+        src="../images/cube2.webp"
         alt="3d grapic in the style of Bauhaus"
       />
     </div>
